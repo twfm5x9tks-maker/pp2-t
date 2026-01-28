@@ -1,6 +1,8 @@
 # python HOME
 
 print("Hello,professor")
+print("hi")
+print("Python")
 
 
 # python SYNTAX
@@ -19,7 +21,7 @@ print("Have a good day.")
 print("Bye!")
 
 print("HELLO!"); print("Have a good day."); print("Bye!")
-"""print("HELLO!") print("Have a good day.") print("Bye!")"""
+print("I'm learning Python"); print("this will work")
 
 
 # python OUTPUT TEXT 
@@ -31,7 +33,6 @@ print('This will work', end=" ")
 # python OUTPUT NUMBERS
 
 print(6523)
-
 print(23+465132)
 print(45*465)
 
@@ -45,8 +46,8 @@ b="Adi"
 print(a)
 print(b)
 
-a=5     #int
-a="Adi" #str
+a=5       #int
+a="Adi"   #str
 print(a)
 
 x=str(3)   #'3'
@@ -73,11 +74,6 @@ myVar = "aa"
 MYVAR = "aa"
 myvar2 = "aa"
 
-"""
-2myvar = "aa"
-my-var = "aa"
-my var = "aa"
-"""
 
 # python MULTIPLE VALUES
 
@@ -143,10 +139,10 @@ print("python is"+x)
 
 # python DATA TYPES 
 
-x = "Hello World"	#str	
-x = 20	            #int	
-x = 20.5	        #float	
-x = 1j	            #complex	
+x = "Hello World"	                #str	
+x = 20	                            #int	
+x = 20.5	                        #float	
+x = 1j	                            #complex	
 x = ["apple", "banana", "cherry"]	#list	
 x = ("apple", "banana", "cherry")	#tuple	
 x = range(6)	                    #range	
@@ -193,3 +189,75 @@ w = float("4.2") # w will be 4.2
 x = str("s1") # x will be 's1'
 y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0'
+
+# python STRINGS
+print("String")
+print('String')
+
+print("I'm agree")
+print("He is called 'Ali'")
+print('He is called "Ali"')
+
+a="Hi"
+print(a)
+
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+
+a="Hello, World!"
+print(a[1])   #e
+
+for i in "Sunday":
+    print(i)
+
+a="run"
+print(len(a)) #3
+
+txt="I didn't go to the school"
+print("didn't" in txt)  #True
+
+txt="I'm tired"
+if "tired" in txt:
+    print("Yes, 'tired' is present")
+
+txt = "I didn't go to the school"
+print("want" not in txt)
+
+txt = "I didn't go to the school"
+if "want" not in txt:
+  print("No, 'want' is NOT present")
+
+# python SLICING STRINGS
+
+c="Hello, Anna"
+print(c[7:10])   #Ann
+print(c[:5])     #Hello
+print(c[8:])     #nna
+print(c[-5:-1])  # Ann
+
+# python MODIFY STRINGS
+
+c="    Hello, Anna    "
+print(c.upper())  #HELLO, ANNA
+print(c.lower())  #hello, anna
+print(c.strip())  #"Hello, Anna"
+print(c.replace("A", "N"))  # Hello, Nnna
+print(c.split(","))         # ['Hello', 'Anna']
+
+# python STRING CONCATENATION
+
+a="Hello"
+b="Anna"
+c=a+b
+print(c)    #HelloAnna
+c=a+" "+b
+print(c)    #Hello Anna
