@@ -1,53 +1,64 @@
-"""
-Super() Function - Calling Parent Methods
-"""
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+class Student(Person):
+    def __init__(self, name):
+        super().__init__(name)
+
+s = Student("Ali")
+print(s.name)
+
+
+
 
 class Vehicle:
-    def __init__(self, brand, model, year):
-        self.brand = brand
-        self.model = model
-        self.year = year
-        print(f"Vehicle __init__ called for {brand}")
-    
-    def start(self):
-        return f"{self.brand} {self.model} engine started"
-    
-    def info(self):
-        return f"{self.year} {self.brand} {self.model}"
+    def __init__(self, speed):
+        self.speed = speed
 
 class Car(Vehicle):
-    def __init__(self, brand, model, year, doors):
-        super().__init__(brand, model, year)  # Call parent __init__
-        self.doors = doors
-        print(f"Car __init__ called for {brand}")
-    
-    def start(self):
-        # Call parent method and extend it
-        parent_start = super().start()
-        return f"{parent_start} - Ready to drive with {self.doors} doors"
-    
-    def honk(self):
-        return "Beep beep!"
+    def __init__(self, speed):
+        super().__init__(speed)
 
-class ElectricCar(Car):
-    def __init__(self, brand, model, year, doors, battery_size):
-        super().__init__(brand, model, year, doors)
-        self.battery_size = battery_size
-    
-    def start(self):
-        return f"🔋 {super().start()} (Electric mode)"
-    
-    def charge(self):
-        return f"Charging {self.battery_size}kWh battery"
+c = Car(120)
+print(c.speed)
 
-# Testing
-print("=== SUPER() FUNCTION ===\n")
-car = Car("Toyota", "Camry", 2023, 4)
-print(car.start())
-print(car.info())
-print(car.honk())
 
-print("\n" + "="*30 + "\n")
-tesla = ElectricCar("Tesla", "Model 3", 2024, 4, 75)
-print(tesla.start())
-print(tesla.charge())
+
+
+class Animal:
+    def __init__(self, kind):
+        self.kind = kind
+
+class Dog(Animal):
+    def __init__(self, kind):
+        super().__init__(kind)
+
+d = Dog("Mammal")
+print(d.kind)
+
+
+
+
+class Book:
+    def __init__(self, title):
+        self.title = title
+
+class Textbook(Book):
+    def __init__(self, title):
+        super().__init__(title)
+
+b = Textbook("Physics")
+print(b.title)
+
+#5
+class City:
+    def __init__(self, name):
+        self.name = name
+
+class Capital(City):
+    def __init__(self, name):
+        super().__init__(name)
+
+c = Capital("Astana")
+print(c.name)
