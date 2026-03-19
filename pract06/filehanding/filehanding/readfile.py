@@ -1,20 +1,25 @@
-# Example of reading data from a file
-from pathlib import Path
+#1
+with open("filer.txt", "r") as f:
+    print(f.read())
 
-file_path = Path("sample.txt")
 
-# Read entire file
-with open(file_path, "r") as file:
-    content = file.read()
-    print("File content:")
-    print(content)
+#2
+with open("filer02.txt", "r") as f:
+    print(f.readline())
 
-# Read one line
-with open(file_path, "r") as file:
-    first_line = file.readline()
-    print("First line:", first_line)
 
-# Read all lines as a list
-with open(file_path, "r") as file:
-    lines = file.readlines()
-    print("All lines:", lines)
+#3
+with open("filer02.txt", "r") as f:
+    print(f.readlines())
+
+
+#4
+with open("filer03.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+
+
+#5
+with open("filer3.txt", "r") as f:
+    print(f.read(5)) 
+print("5 read examples done")

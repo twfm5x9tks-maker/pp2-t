@@ -1,13 +1,21 @@
-# Moving files between directories
 import shutil
-from pathlib import Path
 
-source = Path("data/sample_file.txt")
-destination = Path("data/subfolder/sample_file.txt")
+#1
+shutil.move("file1.txt", "folder1/file1.txt")
 
-# Move file
-shutil.move(source, destination)
-print(f"{source} has been moved to {destination}.")
 
-# List all files in subfolder
-print("Files in subfolder:", list(Path("data/subfolder").iterdir()))
+#2
+shutil.copy("file2.txt", "folder1/file2.txt")
+
+
+#3
+shutil.move("file3.txt", "file3_renamed.txt")
+
+
+#4
+shutil.copy("file4.txt", "parent1/file4.txt")
+
+
+#5
+shutil.copy("file5.txt", "folder1/file5.txt")
+print("5 move/copy examples done")
