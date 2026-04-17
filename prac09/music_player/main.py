@@ -43,14 +43,14 @@ while not done:
                 pygame.mixer.music.load(tracks[current_track]["music"])
 
                 current_image = pygame.image.load(tracks[current_track]["image"])
-                current_image = pygame.transform.scale(current_image, (400,300))
+                current_image = pygame.transform.scale(current_image, (400,400))
                 pygame.mixer.music.play()
             if event.key == pygame.K_b:
                 current_track = (current_track-1)%len(tracks)
                 pygame.mixer.music.load(tracks[current_track]["music"])
 
                 current_image = pygame.image.load(tracks[current_track]["image"])
-                current_image = pygame.transform.scale(current_image, (400,300))
+                current_image = pygame.transform.scale(current_image, (400,400))
                 pygame.mixer.music.play()
 
             if event.key == pygame.K_UP:
@@ -70,7 +70,7 @@ while not done:
                 current_track = (current_track + 1) % len(tracks)
                 pygame.mixer.music.load(tracks[current_track]["music"])
                 current_image = pygame.image.load(tracks[current_track]["image"])
-                current_image = pygame.transform.scale(current_image, (400,300))
+                current_image = pygame.transform.scale(current_image, (400,400))
                 pygame.mixer.music.play()
 
     screen.fill((255,255,255))
